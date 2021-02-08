@@ -95,10 +95,14 @@ ul li {
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+ul li:hover {
+  background-color: #f5f5f5;
 }
 li #user-info {
   height: 3rem;
-  border: 1px solid #ccc;
   display: flex;
   align-items: center;
 }
@@ -126,7 +130,6 @@ li #user-info {
 }
 /* trends  */
 .trends {
-  border: 1px solid #ccc;
   padding: 0 0 0 3rem;
   line-height: 2rem;
 }

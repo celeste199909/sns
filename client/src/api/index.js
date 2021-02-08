@@ -23,7 +23,7 @@ function login (loginForm) {
     loginForm: loginForm
   })
     .then(res => {
-      console.log(11);
+      console.log(res.data);
       let { code, message, token } = res.data
       localStorage.setItem("token", token)
     })
@@ -36,7 +36,30 @@ function login (loginForm) {
 function logout () {
   localStorage.removeItem("token")
 }
+// 注册
+function register (registerForm) {
+  axios.post("/register", {
+    registerForm: registerForm
+  })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      // console.log(err)
+      console.log(222);
+    })
+}
+// 验证token
+function verifyToken (token) {
+  axios.post("/verify-token", { token })
+    .then(res => {
+      return res
+    })
+    .catch(err => {
+      console.log(err);
+    })
+}
 
 export {
-  login
+  login, register, verifyToken
 }

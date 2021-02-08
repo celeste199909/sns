@@ -14,7 +14,7 @@
         <router-link :to="{path: '/me'}">我</router-link>
       </li>
       <li>
-        <router-link :to="{path: '/login'}">登录</router-link>
+        <router-link :to="{path: '/log-reg'}">登录</router-link>
       </li>
     </ul>
   </div>
@@ -29,6 +29,7 @@
 <style scoped>
 #nav {
   flex: 1 1 200px;
+  min-width: 40px;
   height: 100vh;
   padding: 1rem;
   border: 1px solid #ccc;
